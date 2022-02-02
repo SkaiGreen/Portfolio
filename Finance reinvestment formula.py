@@ -18,8 +18,8 @@ if Revenue == "a" or "b":
     M = int(input("Enter the number of months you would like to know the new revenue on: "))
     if Revenue == "b":
         risk = float(input("Enter monthly risk/loss percentage: "))
-        RI = RI - (RI*risk)
-        I = I - (I * risk)
+        RI = RI - (RI*risk/100)
+        I = I - (I * risk/100)
 
 
 
@@ -37,6 +37,16 @@ G7 = G6-((RI - MP * I * 7) / (MP * I * 7))
 G8 = G7-((RI - MP * I * 8) / (MP * I * 8))
 G9 = G8-((RI - MP * I * 9) / (MP * I * 9))
 G10 = G9-((RI - MP * I * 10) / (MP * I * 10))
+G11 = G10-((RI - MP * I * 11) / (MP * I * 11))
+G12 = G11-((RI - MP * I * 12) / (MP * I * 12))
+G13 = G12-((RI - MP * I * 13) / (MP * I * 13))
+G14 = G13-((RI - MP * I * 14) / (MP * I * 14))
+G15 = G14-((RI - MP * I * 15) / (MP * I * 15))
+G16 = G15-((RI - MP * I * 16) / (MP * I * 16))
+G17 = G16-((RI - MP * I * 17) / (MP * I * 17))
+G18 = G17-((RI - MP * I * 18) / (MP * I * 18))
+G19 = G18-((RI - MP * I * 19) / (MP * I * 19))
+G20 = G19-((RI - MP * I * 20) / (MP * I * 20))
 
 #print(G1,G2,G3,G4,G5)
 #print(G1,G1+G2,G2+G3+G1,G1+G2+G3+G4,G1+G2+G3+G4+G5)
@@ -61,7 +71,29 @@ elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9:
     Answer = (MP * I) + ((9 - 1) * MP * RI)
 elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10:
     Answer = (MP * I) + ((10 - 1) * MP * RI)
-elif M > G1+G2+G3+G4+G5+G6+G7+G8+G9+G10:
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16+G17:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16+G17+G18:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16+G17+G18+G19:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+elif M <= G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16+G17+G18+G19+G20:
+    Answer = (MP * I) + ((10 - 1) * MP * RI)
+
+
+elif M > G1+G2+G3+G4+G5+G6+G7+G8+G9+G10+G11+G12+G13+G14+G15+G16+G17+G18+G19+G20:
     Answer = "Currently can not compute that many groups"
 
-print("Monthly Renvenue on month " + M+" will be "+CS+str(Answer))
+print("Monthly Renvenue on month " + str(M)+" will be "+CS+str(Answer))
